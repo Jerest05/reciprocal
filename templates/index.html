@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>ReciprocalFollow</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/static/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: linear-gradient(to bottom right, #fdfdfd, #f0f4ff);
+      font-family: 'Segoe UI', sans-serif;
+    }
+  </style>
+</head>
+
+<header>
+  <h1 class="text-3xl font-bold text-center text-indigo-700 mb-8">
+    Descubre quién no te sigue en Instagram
+  </h1>
+</header>
+
+<div class="flex flex-col items-center">
+  <!-- Instrucciones: bloque uno -->
+  <div class="mb-10 max-w-2xl">
+    <h2 class="text-xl font-semibold text-center text-indigo-700 mb-4">
+      ¿Cómo usar esta herramienta?
+    </h2>
+    <ol class="list-decimal space-y-2 pl-5 text-sm">
+      <li>Descarga tus datos para realizar la comparación en zip con formato JSON.</li>
+      <li>Selecciona el archivo descargado.</li>
+      <li>Obtén los resultados de manera inmediata.</li>
+    </ol>
+  </div>
+
+  <!-- Instrucciones: bloque dos -->
+  <div class="mb-10 max-w-2xl">
+    <h2 class="text-xl font-semibold text-center text-indigo-700 mb-4">
+      ¿Cómo descargar mis datos?
+    </h2>
+    <ol class="list-decimal space-y-2 pl-5 text-sm">
+      <li>Ingresá a tu cuenta de Instagram desde el celular o PC.</li>
+      <li>Entrá en <strong>Configuración y actividad &gt; Centro de cuentas &gt; Tu información y permisos &gt; Descargar tu información</strong>.</li>
+      <li><strong>Descargar o transferir información &gt; Elegí la cuenta deseada &gt; Siguiente</strong>.</li>
+      <li><strong>Parte de tu información &gt; Conexiones &gt; Seguidores y seguidos</strong></li>
+      <li><strong>Descargar en dispositivo</strong></li>
+      <li><strong>Intervalo de fechas:</strong> desde el principio.</li>
+      <li><strong>Formato de descarga:</strong> JSON</li>
+      <li>Presioná <strong>Crear archivos</strong>.</li>
+      <li>En ~24h recibirás una notificación para descargar el archivo.</li>
+      <li>Subilo acá usando el botón <strong>Seleccionar archivo</strong>.</li>
+      <li>Presioná <strong>Analizar ahora</strong> y esperá unos segundos.</li>
+      <li>Te mostraremos quién no te sigue de vuelta. Fácil, privado y sin loguearte.</li>
+    </ol>
+  </div>
+
+  <!-- Sección principal -->
+  <main class="w-full max-w-xl bg-white shadow-xl rounded-2xl p-10 border border-gray-200">
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2483264286021170" crossorigin="anonymous"></script>
+
+    <p class="text-gray-600 mb-6 text-sm sm:text-base">
+      Descubrilo al instante.<br>
+      Gratis, privado y sin necesidad de loguearte.
+    </p>
+
+    <form action="/" method="post" enctype="multipart/form-data" class="space-y-5">
+      <input type="file" name="archivo" accept=".zip" required
+             class="w-full border border-gray-300 rounded-lg py-2 px-3 text-sm
+                    file:bg-indigo-50 file:text-indigo-700 file:border-0
+                    file:mr-4 file:py-2 file:px-4 file:rounded-lg">
+
+      <button type="submit"
+              class="w-full py-3 rounded-lg bg-indigo-600 text-white font-semibold
+                     hover:bg-indigo-700 transition">
+        Analizar ahora
+      </button>
+    </form>
+  </main>
+
+  <!-- Footer -->
+  <footer class="text-center text-xs text-gray-500 py-6">
+    © {{ current_year }} ReciprocalFollow – <a href="/privacidad" class="underline">Privacidad</a>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2483264286021170"
+  crossorigin="anonymous"></script>
+
+  <meta charset="utf-8">
+  <title>Resultados – ReciprocalFollow</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@^3/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+
+<body class="bg-gray-50 text-gray-800">
+
+  <section class="max-w-4xl mx-auto py-12 px-4">
+    <h1 class="text-3xl font-bold mb-6 text-indigo-600">
+      Usuarios que no te siguen
+    </h1>
+
+    {% if resultado %}
+      <ul class="bg-white shadow rounded-xl p-6 space-y-2 max-h-[60vh] overflow-y-auto">
+        {% for user in resultado %}
+          <li class="border-b last:border-0 py-1">{{ user }}</li>
+        {% endfor %}
+      </ul>
+      <p class="mt-4 text-sm text-gray-500">Total: {{ resultado|length }}</p>
+    {% else %}
+      <div class="bg-white shadow rounded-xl p-6">
+        <p class="text-lg">¡Todos te siguen de vuelta! 🎉</p>
+      </div>
+    {% endif %}
+  </section>
+<a href="/" class="inline-block mt-6 text-indigo-600 underline">← Volver a la página principal</a>
+  <!-- Bloque de anuncio / CTA -->
+  <aside class="max-w-4xl mx-auto mb-12 px-4">
+    <div class="bg-indigo-600 text-white rounded-xl p-6 text-center shadow-lg">
+      <h2 class="text-xl font-semibold mb-2"></h2>
+      <p class="mb-4"></p>
+      <a href="#" class="bg-white text-indigo-600 font-bold py-2 px-4 rounded-lg hover:bg-gray-100 transition">
+       </a>
+    </div>
+
+    <!-- Placeholder anuncio -->
+    <div class="mt-8 flex justify-center">
+      <div class="w-80 h-40 bg-gray-300 flex items-center justify-center rounded-lg">
+        <span></span>
+      </div>
+    </div>
+  </aside>
+
+  <footer class="text-center text-xs text-gray-500 pb-8">
+    © {{ current_year }} ReciprocalFollow – <a href="/privacidad" class="underline">Privacidad</a>
+  </footer>
+
+</body>
+</html>
